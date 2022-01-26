@@ -1,0 +1,1 @@
+sticky=(tk.W + tk.E)

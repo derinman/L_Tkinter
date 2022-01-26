@@ -1,0 +1,1 @@
+scene3 = GameScreen(game, "assets/scene3.png", (117,54,329,412), None, "The Door is Open!")
