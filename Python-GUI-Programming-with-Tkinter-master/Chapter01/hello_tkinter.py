@@ -1,12 +1,11 @@
 """Hello World application for Tkinter"""
 
 
-from tkinter import *
-from tkinter.ttk 
-import *
+import tkinter as tk
+from tkinter import ttk
 
-root = Tk()
+root = tk.Tk()
 
-label = Label(root, text="Hello World")
+label = ttk.Label(root, text="Hello World")
 label.pack()
 root.mainloop()
