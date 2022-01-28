@@ -8,6 +8,7 @@ def print_result():
     print('click')
 
 my_checkbutton = ttk.Checkbutton(
+    parent,
     text="Check to make this option True",
     variable=my_boolean_var,
     command=print_result

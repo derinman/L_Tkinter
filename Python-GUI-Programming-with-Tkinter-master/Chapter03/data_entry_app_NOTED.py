@@ -232,7 +232,7 @@ class Application(tk.Tk):
         super().__init__(*args, **kwargs)
 
         self.title("ABQ Data Entry Application")
-        self.resizable(width=False, height=False)
+        self.resizable(width=True, height=False)
 
         ttk.Label(
             self,
