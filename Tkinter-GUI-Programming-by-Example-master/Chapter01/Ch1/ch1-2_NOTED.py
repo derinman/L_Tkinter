@@ -6,13 +6,16 @@ class Window(tk.Tk):
         self.title("Hello Tkinter")
 
         self.label = tk.Label(self, text="Choose One")
-        self.label.pack(fill=tk.BOTH, expand=1, padx=100, pady=30)
+        self.label.pack(fill=tk.BOTH, expand=0, padx=100, pady=30)
 
         hello_button = tk.Button(self, text="Say Hello", command=self.say_hello)
-        hello_button.pack(side=tk.LEFT, padx=(20, 0), pady=(0, 20))
+        hello_button.pack(side=tk.TOP, padx=(20, 0), pady=(0, 20))
 
         goodbye_button = tk.Button(self, text="Say Goodbye", command=self.say_goodbye)
         goodbye_button.pack(side=tk.RIGHT, padx=(0, 20), pady=(0, 20))
+
+        label2 = tk.Label(self, text="HAPPY")
+        label2.pack(side=tk.BOTTOM, expand=0, padx=(20, 0), pady=(0, 20))
 
     def say_hello(self):
         self.label.config(text="Hello World!")
