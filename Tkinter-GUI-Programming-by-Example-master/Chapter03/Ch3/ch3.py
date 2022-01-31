@@ -169,6 +169,7 @@ class GameScreen(tk.Tk):
         table_state = self.game_state.calculate_final_state()
         self.display_table(False, table_state)
 
+
 class GameState:
     def __init__(self):
         self.deck = Deck()
