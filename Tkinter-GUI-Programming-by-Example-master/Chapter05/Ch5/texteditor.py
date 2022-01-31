@@ -19,8 +19,8 @@ class MainWindow(tk.Tk):
         self.line_numbers.insert(1.0, "\n".join(first_100_numbers))
         self.line_numbers.configure(state="disabled", width=3)
 
-        self.scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-        self.line_numbers.pack(side=tk.LEFT, fill=tk.Y)
+        self.scrollbar.pack(side=tk.RIGHT, fill=tk.Y,expand=0)
+        self.line_numbers.pack(side=tk.LEFT, fill=tk.Y,expand=0)
         self.text_area.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
 
         self.bind_events()
