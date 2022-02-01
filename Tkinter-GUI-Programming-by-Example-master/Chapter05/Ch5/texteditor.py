@@ -35,8 +35,11 @@ class MainWindow(tk.Tk):
         self.line_numbers.bind("<Button-5>", lambda e: "break")
 
     def scroll_text(self, *args):
+        print(args[0])
+        
         if len(args) > 1:
             self.text_area.yview_moveto(args[1])
+            
             self.line_numbers.yview_moveto(args[1])
         else:
             event = args[0]
