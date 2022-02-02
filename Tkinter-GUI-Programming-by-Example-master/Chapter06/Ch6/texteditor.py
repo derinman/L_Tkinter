@@ -6,6 +6,10 @@ from linenumbers import LineNumbers
 from highlighter import Highlighter
 from findwindow import FindWindow
 
+from pathlib import Path
+
+
+script_location = Path(__file__).absolute().parent
 
 class MainWindow(tk.Tk):
     def __init__(self):
@@ -17,7 +21,7 @@ class MainWindow(tk.Tk):
         self.text_area.configure(yscrollcommand=self.scrollbar.set)
 
         self.line_numbers = LineNumbers(self, self.text_area, bg="grey", fg="white", width=1)
-        self.highlighter = Highlighter(self.text_area, 'languages/python.yaml')
+        self.highlighter = Highlighter(self.text_area, script_location/'languages/python.yaml')
 
         self.scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
         self.line_numbers.pack(side=tk.LEFT, fill=tk.Y)

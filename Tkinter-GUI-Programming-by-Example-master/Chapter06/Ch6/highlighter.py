@@ -1,7 +1,8 @@
 import tkinter as tk
-
+from pathlib import Path
 import yaml
 
+script_location = Path(__file__).absolute().parent
 
 class Highlighter:
     def __init__(self, text_widget, syntax_file):
