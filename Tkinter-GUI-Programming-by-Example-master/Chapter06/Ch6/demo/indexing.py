@@ -8,6 +8,7 @@ lab = tk.Label(win, textvar=current_index)
 
 def update_index(event=None):
     cursor_position = text.index(tk.INSERT)
+    print(cursor_position)
     cursor_position_pieces = str(cursor_position).split('.')
 
     cursor_line = cursor_position_pieces[0]

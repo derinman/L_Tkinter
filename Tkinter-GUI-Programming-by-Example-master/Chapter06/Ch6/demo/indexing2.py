@@ -2,7 +2,7 @@ import tkinter as tk
 
 win = tk.Tk()
 current_index = tk.StringVar()
-text = tk.Text(win, bg="white", fg="black")
+text = tk.Text(win, bg="black", fg="white")
 lab = tk.Label(win, textvar=current_index)
 
 
@@ -50,7 +50,7 @@ def back_four_chars(event=None):
 
 
 text.pack(side=tk.TOP, fill=tk.BOTH, expand=1)
-lab.pack(side=tk.BOTTOM, fill=tk.X, expand=1)
+lab.pack(side=tk.BOTTOM, fill=tk.X)
 
 text.bind('<KeyRelease>', update_index)
 text.bind('<Control-h>', highlight_line)
