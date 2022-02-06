@@ -2,6 +2,10 @@ import tkinter as tk
 
 import yaml
 
+from pathlib import Path
+
+script_location = Path(__file__).absolute().parent
+
 
 class Highlighter:
     def __init__(self, text_widget, syntax_file):
@@ -99,7 +103,7 @@ class Highlighter:
 
 if __name__ == '__main__':
     w = tk.Tk()
-    h = Highlighter(tk.Text(w), 'languages/python.yaml')
+    h = Highlighter(tk.Text(w), script_location/'languages/python.yaml')
     w.mainloop()
 
 

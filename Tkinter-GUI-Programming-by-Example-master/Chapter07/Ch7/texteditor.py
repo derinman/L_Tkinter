@@ -10,9 +10,13 @@ from textarea import TextArea
 from linenumbers import LineNumbers
 from highlighter import Highlighter
 from findwindow import FindWindow
-from colorchooser import colorChooser
+# from tkinter.colorchooser import colorChooser
 from fontchooser import FontChooser
 
+
+from pathlib import Path
+
+script_location = Path(__file__).absolute().parent
 
 class MainWindow(tk.Tk):
     def __init__(self):
@@ -40,7 +44,7 @@ class MainWindow(tk.Tk):
         self.text_area.configure(yscrollcommand=self.scrollbar.set)
 
         self.line_numbers = LineNumbers(self, self.text_area, bg="grey", fg="white", width=1)
-        self.highlighter = Highlighter(self.text_area, 'languages/python.yaml')
+        self.highlighter = Highlighter(self.text_area, script_location/'languages/python.yaml')
 
         self.menu = tk.Menu(self, bg=self.background, fg=self.foreground)
         self.all_menus = [self.menu]
@@ -189,7 +193,7 @@ class MainWindow(tk.Tk):
         FontChooser(self)
 
     def update_font(self):
-        self.load_font_file('schemes/font.yaml')
+        self.load_font_file(script_location/'schemes/font.yaml')
         self.text_area.configure(font=(self.font_family, self.font_size))
 
     # =========== Menu Functions ==============
