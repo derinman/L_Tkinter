@@ -30,12 +30,12 @@ class MainWindow(tk.Tk):
         self.text_foreground = 'black'
         self.text_background='white'
 
-        self.load_scheme_file('schemes/default.yaml')
+        self.load_scheme_file(script_location/'schemes/default.yaml')
         self.configure_ttk_elements()
 
         self.font_size = 15
         self.font_family = "Ubuntu Mono"
-        self.load_font_file('schemes/font.yaml')
+        self.load_font_file(script_location/'schemes/font.yaml')
 
         self.text_area = TextArea(self, bg=self.text_background, fg=self.text_foreground, undo=True,
                                   font=(self.font_family, self.font_size))
@@ -122,6 +122,8 @@ class MainWindow(tk.Tk):
 
         my_methods = [method for method in set(window_methods) - set(tkinter_methods)]
         my_methods = sorted(my_methods)
+        # print(set(tkinter_methods))
+        # print(my_methods)
 
         for item in sub_menu_items:
             sub_menu = tk.Menu(self.menu, tearoff=0, bg=self.background, fg=self.foreground)
@@ -230,6 +232,12 @@ class MainWindow(tk.Tk):
             contents = self.text_area.get(1.0, tk.END)
             with open(current_file, 'w') as file:
                 file.write(contents)
+
+    def file_print(self, event=None):
+        """
+        Ctrl+U
+        """
+        print("fuck you")
 
     def edit_cut(self, event=None):
         """
