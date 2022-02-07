@@ -17,6 +17,7 @@ class FontChooser(tk.Toplevel):
         self.font_list = tk.Listbox(self, exportselection=False)
 
         self.available_fonts = sorted(families())
+        print(self.available_fonts)
 
         for family in self.available_fonts:
             self.font_list.insert(tk.END, family)

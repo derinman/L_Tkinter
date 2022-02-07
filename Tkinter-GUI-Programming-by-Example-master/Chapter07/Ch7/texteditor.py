@@ -34,8 +34,9 @@ class MainWindow(tk.Tk):
         self.configure_ttk_elements()
 
         self.font_size = 15
-        self.font_family = "Ubuntu Mono"
+        self.font_family = "clean"
         self.load_font_file(script_location/'schemes/font.yaml')
+        self.font_file = script_location/'schemes/font.yaml'
 
         self.text_area = TextArea(self, bg=self.text_background, fg=self.text_foreground, undo=True,
                                   font=(self.font_family, self.font_size))
