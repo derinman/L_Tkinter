@@ -22,6 +22,7 @@ class FontChooser(tk.Toplevel):
         for family in self.available_fonts:
             self.font_list.insert(tk.END, family)
 
+        #開啟時可以看見目前使用的字體    
         current_selection_index = self.available_fonts.index(self.master.font_family)
         if current_selection_index:
             self.font_list.select_set(current_selection_index)
@@ -33,7 +34,7 @@ class FontChooser(tk.Toplevel):
 
         self.save_button.pack(side=tk.BOTTOM, fill=tk.X, expand=1, padx=40)
         self.font_list.pack(side=tk.LEFT, fill=tk.Y, expand=1)
-        self.size_input.pack(side=tk.BOTTOM, fill=tk.X, expand=1)
+        self.size_input.pack(side=tk.RIGHT, fill=tk.X, expand=1)
 
     def save(self):
         font_family = self.font_list.get(self.font_list.curselection()[0])

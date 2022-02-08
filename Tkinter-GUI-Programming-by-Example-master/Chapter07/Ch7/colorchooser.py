@@ -2,6 +2,9 @@ import tkinter as tk
 import tkinter.ttk as ttk
 from tkinter.colorchooser import askcolor
 
+from pathlib import Path
+
+script_location = Path(__file__).absolute().parent
 
 class colorChooser(tk.Toplevel):
     def __init__(self, master, **kwargs):
@@ -106,7 +109,7 @@ class colorChooser(tk.Toplevel):
                              + f"text_background: '{self.chosen_text_background_color.get()}'\n" \
                              + f"text_foreground: '{self.chosen_text_foreground_color.get()}'\n"
 
-        with open("schemes/default.yaml", "w") as yaml_file:
+        with open(script_location/"schemes/default.yaml", "w") as yaml_file:
             yaml_file.write(yaml_file_contents)
 
         self.master.apply_color_scheme(self.chosen_foreground_color.get(), self.chosen_background_color.get(),

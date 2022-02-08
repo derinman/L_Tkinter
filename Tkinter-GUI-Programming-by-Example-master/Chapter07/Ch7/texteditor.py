@@ -10,7 +10,7 @@ from textarea import TextArea
 from linenumbers import LineNumbers
 from highlighter import Highlighter
 from findwindow import FindWindow
-# from tkinter.colorchooser import colorChooser
+from colorchooser import colorChooser
 from fontchooser import FontChooser
 
 
