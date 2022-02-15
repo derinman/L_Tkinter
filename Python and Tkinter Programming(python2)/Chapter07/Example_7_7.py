@@ -1,4 +1,4 @@
-from Tkinter      import *
+import tkinter  as tk
 from Common       import *
 from Components   import *
 
@@ -7,7 +7,7 @@ class SWITCH_INDICATOR:
                  metal=Color.CHROME, mount=1, frame=1, 
                  shape=ROUND, top=NUT_POINT, mode=MODE_US,
                  status=1):
-        self.frame = Frame(master, bg=bg)
+        self.frame = tk.Frame(master, bg=bg)
         self.frame.pack(anchor=N, expand=YES, fill=X)
 
         self.led = LED(self.frame, width=outside, height=outside, 
@@ -34,17 +34,17 @@ class TestComposite(Frame):
         self.make_widgets()
 
     def make_widgets(self):
-            switches = [(NUT_POINT, 0, STATUS_OFF, MODE_US),
+        switches = [(NUT_POINT, 0, STATUS_OFF, MODE_US),
                         (NUT_FLAT,  1, STATUS_ON,  MODE_US),
                         (NUT_FLAT,  0, STATUS_ON,  MODE_UK),
                         (NUT_POINT, 0, STATUS_OFF, MODE_UK)]
 
-            frame = Frame(self, bg="gray80")
-            frame.pack(anchor=N, expand=YES, fill=X)
-	    idx = 0
-            for top, mount, state, mode in switches:
-		exec 'var = self.swin%d = None' % idx
-                var = SWITCH_INDICATOR(frame,
+        frame = tk.Frame(self, bg="gray80")
+        frame.pack(anchor=N, expand=YES, fill=X)
+        idx=0
+        for top, mount, state, mode in switches:
+		    exec 'var = self.swin%d = None' % idx
+            var = SWITCH_INDICATOR(frame,
                                  mount=mount, 
                                  outside=20,
                                  metal=Color.CHROME, 
@@ -52,9 +52,9 @@ class TestComposite(Frame):
                                  bg="gray80", 
                                  top=top,
                                  status=state)
-		var.frame.pack(side=LEFT, expand=YES,
+		    var.frame.pack(side=LEFT, expand=YES,
                                padx=2, pady=6)
-                idx = idx + 1
+            idx = idx + 1
                 
 if __name__ == '__main__':
     TestComposite().mainloop()
