@@ -15,6 +15,7 @@ class LoggerMixin():
         super().display(message)
         self.log(message)
 
+#繼承兩個parent
 class MySubClass(LoggerMixin, Displayer):
 
     def log(self, message):
