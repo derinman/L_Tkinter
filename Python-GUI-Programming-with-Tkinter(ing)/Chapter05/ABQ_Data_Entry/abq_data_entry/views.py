@@ -54,6 +54,7 @@ class DataRecordForm(tk.Frame):
 
         # Environment Data
         environmentinfo = tk.LabelFrame(self, text="Environment Data")
+        
         self.inputs['Humidity'] = w.LabelInput(
             environmentinfo, "Humidity (g/m³)",
             field_spec=fields['Humidity']
@@ -155,6 +156,7 @@ class DataRecordForm(tk.Frame):
         technician = self.inputs['Technician'].get()
         plot = self.inputs['Plot'].get()
         plot_values = self.inputs['Plot'].input.cget('values')
+        print('test')
 
         # clear all values
         for widget in self.inputs.values():
