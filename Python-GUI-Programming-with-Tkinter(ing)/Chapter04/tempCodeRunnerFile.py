@@ -1,1 +1,1 @@
-    FiveCharEntry(root, error_var=ev).pack()
+self.error_label.grid(row=2, column=0, sticky=(tk.W + tk.E))
