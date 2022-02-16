@@ -1,6 +1,7 @@
 import tkinter as tk
 
 root = tk.Tk()
+root.geometry('600x600')
 main_text = tk.StringVar(value='Hi')
 label = tk.Label(root, textvariable=main_text)
 label.pack()
