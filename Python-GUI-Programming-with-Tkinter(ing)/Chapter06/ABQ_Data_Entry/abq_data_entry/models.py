@@ -62,6 +62,7 @@ class SettingsModel:
         'autofill sheet data': {'type': 'bool', 'value': True}
     }
 
+    #去home看一下這個json長怎樣
     def __init__(self, filename='abq_settings.json', path='~'):
         # determine the file path
         self.filepath = os.path.join(os.path.expanduser(path), filename)
@@ -91,7 +92,7 @@ class SettingsModel:
         # if the file doesn't exist, return
         if not os.path.exists(self.filepath):
             return
-
+e
         # open the file and read in the raw values
         with open(self.filepath, 'r') as fh:
             raw_values = json.loads(fh.read())

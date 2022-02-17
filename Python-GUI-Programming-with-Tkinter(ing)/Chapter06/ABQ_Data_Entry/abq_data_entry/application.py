@@ -28,6 +28,7 @@ class Application(tk.Tk):
             'file->quit': self.quit
         }
 
+        #self.setting definded in load_setting
         menu = v.MainMenu(self, self.settings, self.callbacks)
         self.config(menu=menu)
         self.recordform = v.DataRecordForm(

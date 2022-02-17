@@ -7,7 +7,7 @@ root = tk.Tk()
 
 # Create list of paths
 paths = Path('.').glob('**/*')
-
+# print(list(paths))
 
 def sort(tv, col):
     itemlist = list(tv.get_children(''))
