@@ -92,7 +92,7 @@ class SettingsModel:
         # if the file doesn't exist, return
         if not os.path.exists(self.filepath):
             return
-e
+
         # open the file and read in the raw values
         with open(self.filepath, 'r') as fh:
             raw_values = json.loads(fh.read())
