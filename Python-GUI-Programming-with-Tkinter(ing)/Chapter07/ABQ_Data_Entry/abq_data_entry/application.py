@@ -175,3 +175,4 @@ class Application(tk.Tk):
         # put a trace on the variables so they get stored when changed.
         for var in self.settings.values():
             var.trace('w', self.save_settings)
+        # print(self.settings)
