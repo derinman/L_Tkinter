@@ -70,6 +70,7 @@ class CSVModel:
         for record in records:
             for key in bool_fields:
                 record[key] = record[key].lower() in trues
+        # print(records)
         return records
 
     def get_record(self, rownum):
@@ -113,6 +114,7 @@ class SettingsModel:
 
     def __init__(self, filename='abq_settings.json', path='~'):
         # determine the file path
+        
         self.filepath = os.path.join(os.path.expanduser(path), filename)
 
         # load in saved values

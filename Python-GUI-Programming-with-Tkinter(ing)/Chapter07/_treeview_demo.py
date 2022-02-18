@@ -30,6 +30,8 @@ tv.pack(expand=True, fill='both')
 # Populate Treeview
 for path in paths:
     meta = path.stat()
+    # print(meta)
+    # print(path.name)
     parent = str(path.parent)
     if parent == '.':
         parent = ''

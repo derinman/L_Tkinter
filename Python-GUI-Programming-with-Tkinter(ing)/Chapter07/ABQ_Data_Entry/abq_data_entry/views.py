@@ -357,5 +357,6 @@ class RecordList(tk.Frame):
 
     def on_open_record(self, *args):
 
+        print(self.treeview.selection())
         selected_id = self.treeview.selection()[0]
         self.callbacks['on_open_record'](selected_id)
