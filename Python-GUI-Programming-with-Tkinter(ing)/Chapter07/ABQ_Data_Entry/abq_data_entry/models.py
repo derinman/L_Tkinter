@@ -115,8 +115,9 @@ class SettingsModel:
     def __init__(self, filename='abq_settings.json', path='~'):
         # determine the file path
         
+        #此json會被存在家目錄
         self.filepath = os.path.join(os.path.expanduser(path), filename)
-
+        # print('test',os.path.expanduser(path))
         # load in saved values
         self.load()
 

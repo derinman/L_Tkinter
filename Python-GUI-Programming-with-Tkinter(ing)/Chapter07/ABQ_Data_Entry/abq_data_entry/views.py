@@ -152,6 +152,7 @@ class DataRecordForm(tk.Frame):
 
         # default the form
         self.reset()
+        # print('self.current_record:',self.current_record)
 
     def get(self):
         """Retrieve data from form as a dict"""
