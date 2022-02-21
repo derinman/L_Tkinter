@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk  # this is pillow
 
-
+w96
 class PictureViewer(tk.Tk):
 
     def __init__(self, *args, **kwargs):

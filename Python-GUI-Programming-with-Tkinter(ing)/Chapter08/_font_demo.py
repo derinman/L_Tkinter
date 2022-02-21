@@ -16,7 +16,7 @@ tk.Label(
 ).pack()
 
 # Fonts can use named fonts created via the Font class
-labelfont = Font(family='Courier', size=30,
+labelfont = Font(family='Courier', size=100,
                  weight='bold', slant='roman',
                  underline=False, overstrike=False)
 tk.Label(text='Using the Font class', font=labelfont).pack()

@@ -87,7 +87,7 @@ class Application(tk.Tk):
         self.recordform.load_record(rownum, record)
         self.recordform.tkraise()
 
-    def on_save(self):
+    def on_save(youself):
         """Handles save button clicks"""
 
         # Check for errors first
