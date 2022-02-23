@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import ttk
 from pprint import pprint
 
+
+#to demonstrate TTK widget's style
 root = tk.Tk()
 style = ttk.Style()
 
