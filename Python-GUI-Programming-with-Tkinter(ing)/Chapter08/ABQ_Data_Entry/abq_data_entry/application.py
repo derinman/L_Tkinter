@@ -93,6 +93,7 @@ class Application(tk.Tk):
             )
         else:
             self.recordlist.populate(rows)
+            # print('rows:',rows)
 
     def open_record(self, rownum=None):
         if rownum is None:
@@ -166,7 +167,6 @@ class Application(tk.Tk):
             if self.recordform.current_record is None:
                 self.recordform.reset()
 
-
     def on_file_select(self):
         """Handle the file->select action from the menu"""
 
@@ -181,7 +181,6 @@ class Application(tk.Tk):
             self.populate_recordlist()
             self.inserted_rows = []
             self.updated_rows = []
-
 
     def save_settings(self, *args):
         """Save the current settings to a preferences file"""

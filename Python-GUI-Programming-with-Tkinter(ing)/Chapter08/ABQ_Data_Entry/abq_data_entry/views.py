@@ -424,7 +424,8 @@ class RecordList(tk.Frame):
         self.treeview.tag_configure('updated', background='lightblue')
 
         # Bind double-clicks
-        self.treeview.bind('<<TreeviewOpen>>', self.on_open_record)
+        # self.treeview.bind('<<TreeviewOpen>>', self.on_open_record)
+        self.treeview.bind('<<TreeviewSelect>>', self.on_open_record)
 
     def populate(self, rows):
         """Clear the treeview and write the supplied data rows to it."""
