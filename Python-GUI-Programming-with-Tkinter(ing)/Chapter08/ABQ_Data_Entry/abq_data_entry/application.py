@@ -40,6 +40,7 @@ class Application(tk.Tk):
 
         style = ttk.Style()
         theme = self.settings.get('theme').get()
+        # print(style.theme_names())
         if theme in style.theme_names():
             style.theme_use(theme)
 

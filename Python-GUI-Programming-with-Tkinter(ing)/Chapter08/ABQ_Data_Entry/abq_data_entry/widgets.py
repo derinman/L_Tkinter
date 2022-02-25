@@ -166,6 +166,7 @@ class ValidatedCombobox(ValidatedMixin, ttk.Combobox):
         return valid
 
 
+#可與ch7比較
 class ValidatedSpinbox(ValidatedMixin, TtkSpinbox):
     def __init__(self, *args, min_var=None, max_var=None,
                  focus_update_var=None, from_='-Infinity', to='Infinity',
