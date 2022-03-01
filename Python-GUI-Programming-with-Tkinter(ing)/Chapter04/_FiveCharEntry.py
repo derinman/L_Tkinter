@@ -4,6 +4,7 @@ from tkinter import ttk
 root = tk.Tk()
 
 def has_five_or_less_chars(string):
+    print(string)
     return len(string) <= 5
 
 wrapped_function = root.register(has_five_or_less_chars)
