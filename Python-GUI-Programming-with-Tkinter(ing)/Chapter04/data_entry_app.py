@@ -138,16 +138,19 @@ class ValidatedCombobox(ValidatedMixin, ttk.Combobox):
 
         # get our values list
         values = self.cget('values')
+        # print(values)
         # Do a case-insensitve match against the entered text
         matching = [
             x for x in values
             if x.lower().startswith(proposed.lower())
         ]
+        # print(matching)
         if len(matching) == 0:
             valid = False
         elif len(matching) == 1:
             self.set(matching[0])
             self.icursor(tk.END)
+            print('test')
             valid = False
         return valid
 
