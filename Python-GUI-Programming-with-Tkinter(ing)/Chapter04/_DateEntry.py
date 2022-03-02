@@ -23,6 +23,12 @@ class DateEntry(ttk.Entry):
 
     def _validate(self, char, index, event, action):
 
+        print('%S: ',char)
+        print('%i:', index)
+        print('%V', event)
+        print('%d', action)
+        print('===========')
+
         # reset error state
         self._toggle_error()
         valid = True

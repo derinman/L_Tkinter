@@ -40,7 +40,7 @@ class ValidatedMixin:
         if event == 'focusout':
             valid = self._focusout_validate(event=event)
         elif event == 'key':
-            valid = self._key_validate(
+            valid = self._key_validate( 
                 proposed=proposed,
                 current=current,
                 char=char,
