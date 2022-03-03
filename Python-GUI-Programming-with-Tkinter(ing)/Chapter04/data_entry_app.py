@@ -169,7 +169,9 @@ class ValidatedSpinbox(ValidatedMixin, tk.Spinbox):
                  **kwargs):
         super().__init__(*args, from_=from_, to=to, **kwargs)
         self.resolution = Decimal(str(kwargs.get('increment', '1.0')))
+        # print(str(kwargs.get('increment', '1.0')))
         self.precision = self.resolution.normalize().as_tuple().exponent
+        # print(self.precision) #精度幾位數
         # there should always be a variable,
         # or some of our code will fail
         self.variable = kwargs.get('textvariable') or tk.DoubleVar()
@@ -215,6 +217,9 @@ class ValidatedSpinbox(ValidatedMixin, tk.Spinbox):
         self.trigger_focusout_validation()
 
     def _key_validate(self, char, index, current, proposed, action, **kwargs):
+        
+        print(char, index, current, proposed, action)
+        
         valid = True
         min_val = self.cget('from')
         max_val = self.cget('to')
