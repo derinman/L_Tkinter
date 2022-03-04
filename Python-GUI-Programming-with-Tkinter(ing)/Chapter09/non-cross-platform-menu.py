@@ -1,11 +1,16 @@
 import tkinter as tk
 from tkinter.messagebox import showinfo
+from pathlib import Path
+
+
+script_location = Path(__file__).absolute().parent
+
 
 root = tk.Tk()
 menu = tk.Menu(root)
 
 
-smile = tk.PhotoImage(file='smile.gif')
+smile = tk.PhotoImage(file= script_location/'smile.gif')
 smile_menu = tk.Menu(menu, tearoff=False)
 smile_menu.add_command(image=smile,
                        command=lambda: showinfo(message="Smile!"))

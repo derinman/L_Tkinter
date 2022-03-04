@@ -14,5 +14,6 @@ elif os_name == 'Windows':
 else:
     raise NotImplemented("Command unknown for OS")
 
+# print(os_name)
 processes = subprocess.check_output(cmd)
 print(processes)
