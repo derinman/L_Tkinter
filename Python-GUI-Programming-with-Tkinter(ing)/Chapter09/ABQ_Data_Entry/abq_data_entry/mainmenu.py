@@ -65,7 +65,7 @@ class GenericMainMenu(tk.Menu):
                 variable=self.settings['theme']
             )
         options_menu.add_cascade(label='Theme', menu=themes_menu)
-        self.settings['theme'].trace('w', self.on_theme_change)
+        self.settings['theme'].trace('w', self.on_theme_change)#提出要重開才能換theme
         self.add_cascade(label='Options', menu=options_menu)
 
         # switch from recordlist to recordform
@@ -95,6 +95,7 @@ class GenericMainMenu(tk.Menu):
             '<Control-l>': self.callbacks['show_recordlist']
         }
 
+    #無需實例化即可調用
     @staticmethod
     def _argstrip(function, *args):
         return function()
