@@ -408,5 +408,5 @@ class LoginDialog(Dialog):
         return self.username_inp
 
     def apply(self):
-
+        # print(self.user.get())
         self.result = (self.user.get(), self.pw.get())

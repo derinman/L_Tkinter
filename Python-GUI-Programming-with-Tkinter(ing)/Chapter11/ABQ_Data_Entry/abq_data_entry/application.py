@@ -235,6 +235,7 @@ class Application(tk.Tk):
             if not login.result:
                 break
             else:
+                print(login.result)
                 username, password = login.result
                 try:
                     self.data_model = m.SQLModel(
