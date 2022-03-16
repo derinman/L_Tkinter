@@ -287,7 +287,6 @@ class DataRecordForm(tk.Frame):
                 except AttributeError:
                     pass
 
-
 class RecordList(tk.Frame):
     """Display for CSV file contents"""
 

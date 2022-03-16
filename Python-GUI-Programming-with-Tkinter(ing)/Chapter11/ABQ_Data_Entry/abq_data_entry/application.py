@@ -173,7 +173,6 @@ class Application(tk.Tk):
             if self.data_model.last_write == 'insert':
                 self.recordform.reset()
 
-
     def on_file_select(self):
         """Handle the file->select action from the menu"""
 
@@ -188,7 +187,6 @@ class Application(tk.Tk):
             self.populate_recordlist()
             self.inserted_rows = []
             self.updated_rows = []
-
 
     def save_settings(self, *args):
         """Save the current settings to a preferences file"""
