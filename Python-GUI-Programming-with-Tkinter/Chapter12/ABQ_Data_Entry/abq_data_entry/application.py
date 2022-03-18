@@ -335,7 +335,7 @@ class Application(tk.Tk):
             return
         try:
             n.upload_to_corporate_rest(
-                csvfile,
+                csvfile,#filepath
                 self.settings['abq_upload_url'].get(),
                 self.settings['abq_auth_url'].get(),
                 username,

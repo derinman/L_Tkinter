@@ -1,7 +1,7 @@
 from urllib.request import urlopen
 
 # Basic GET request and response examination
-response = urlopen('http://packtpub.com')
+response = urlopen('http://goolge.com')
 print(response.getheader('Content-Type'))
 print(response.getheader('Server'))
 print(response.status)
