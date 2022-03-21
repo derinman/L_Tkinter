@@ -8,7 +8,7 @@ auth.add_user('test', 'test', '.', perm='elrw')
 handler = FTPHandler
 handler.authorizer = auth
 
-address = ('127.0.0.1', 2100)
+address = ('127.0.0.1', 2101)
 server = FTPServer(address, handler)
 
 server.serve_forever()
