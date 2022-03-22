@@ -4,6 +4,7 @@ from time import sleep
 
 def print_slowly(string):
     words = string.split()
+    # print(words)
     for word in words:
         sleep(1)
         print(word)
