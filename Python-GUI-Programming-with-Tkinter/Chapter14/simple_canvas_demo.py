@@ -1,5 +1,9 @@
 import tkinter as tk
 
+from pathlib import Path
+
+script_location = Path(__file__).absolute().parent
+
 root = tk.Tk()
 canvas = tk.Canvas(root, width=1024, height=768)
 canvas.pack()
@@ -22,7 +26,7 @@ canvas.create_polygon((400, 150), (350,  300), (450, 300), fill='blue',  smooth=
 # draw text
 canvas.create_text((400, 600), text='Smile!', fill='cyan', font='TkDefaultFont 64')
 # draw an image
-smiley = tk.PhotoImage(file='smile.gif')
+smiley = tk.PhotoImage(file=script_location/'smile.gif')
 image_item = canvas.create_image((400, 300), image=smiley)
 canvas.tag_bind(image_item, '<Button-1>', lambda e: canvas.delete(image_item))
 

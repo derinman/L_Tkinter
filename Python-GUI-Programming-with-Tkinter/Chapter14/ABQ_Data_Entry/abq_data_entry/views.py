@@ -10,9 +10,9 @@ import matplotlib
 # in order to avoid a warning
 matplotlib.use('TkAgg')
 from matplotlib.figure import Figure
-from matplotlib.backends.backend_tkagg import (
-    FigureCanvasTkAgg, NavigationToolbar2TkAgg)
 
+# from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg, NavigationToolbar2TkAgg)
+from matplotlib.backends.backend_tkagg import ( FigureCanvasTkAgg, NavigationToolbar2Tk)
 
 class DataRecordForm(tk.Frame):
     """The input form for our widgets"""
@@ -490,7 +490,8 @@ class YieldChartView(tk.Frame):
         super().__init__(parent)
         self.figure = Figure(figsize=(6, 4), dpi=100)
         self.canvas = FigureCanvasTkAgg(self.figure, master=self)
-        self.toolbar = NavigationToolbar2TkAgg(self.canvas, self)
+        # self.toolbar = NavigationToolbar2TkAgg(self.canvas, self)
+        self.toolbar = NavigationToolbar2Tk(self.canvas, self)
 
         self.canvas.get_tk_widget().pack(fill='both', expand=True)
 
