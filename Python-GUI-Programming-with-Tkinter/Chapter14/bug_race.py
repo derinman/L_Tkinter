@@ -81,6 +81,7 @@ class Racer:
         self.plot_course()
         self.animate()
 
+    #規劃全部的移動路線
     def plot_course(self):
         start_x = self.canvas.left
         start_y = self.canvas.center_y
@@ -98,12 +99,14 @@ class Racer:
             total_dx += dx
             total_dy += dy
 
+    #移動
     def animate(self):
         if not self.animation_queue.empty():
             nextmove = self.animation_queue.get()
             self.canvas.move(self.id, *nextmove)
         self.canvas.after(self.FRAME_RES, self.animate)
 
+    #讓移動粒度（影格）更細
     def queue_move(self, dx, dy, time):
         num_steps = time // self.FRAME_RES
         steps = zip(
@@ -115,7 +118,9 @@ class Racer:
 
     def overlapping(self):
         bbox = self.canvas.bbox(self.id)
+        # print(bbox)
         overlappers = self.canvas.find_overlapping(*bbox)
+        # print(overlappers)
         return [x for x in overlappers if x!=self.id]
 
 App().mainloop()
