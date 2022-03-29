@@ -429,7 +429,7 @@ class Application(tk.Tk):
         data = self.data_model.get_yield_by_plot()
         seed_colors = {'AXM477': 'red', 'AXM478': 'yellow',
             'AXM479': 'green', 'AXM480': 'blue'}
-
+        print(dict(data[0]))
         for seed, color in seed_colors.items():
             seed_data = [
                 (x['avg_humidity'], x['avg_temperature'], x['yield'])

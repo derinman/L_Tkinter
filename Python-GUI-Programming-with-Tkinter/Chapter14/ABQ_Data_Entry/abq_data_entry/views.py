@@ -510,6 +510,7 @@ class YieldChartView(tk.Frame):
         x, y, s = zip(*data)
         # make differences in s more visible
         s = [(x ** 2)//2 for x in s]
+        # print(s)
         scatter = self.axes.scatter(x, y, s, c=color, label=label, alpha=.5)
         self.scatters.append(scatter)
         self.scatter_labels.append(label)
