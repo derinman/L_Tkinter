@@ -10,8 +10,7 @@ import matplotlib
 # in order to avoid a warning
 matplotlib.use('TkAgg')
 from matplotlib.figure import Figure
-# from matplotlib.backends.backend_tkagg import (
-#     FigureCanvasTkAgg, NavigationToolbar2TkAgg)
+# from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg, NavigationToolbar2TkAgg)
 from matplotlib.backends.backend_tkagg import ( FigureCanvasTkAgg, NavigationToolbar2Tk)
 
 
