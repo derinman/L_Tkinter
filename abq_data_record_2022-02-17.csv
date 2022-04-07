@@ -1,5 +1,0 @@
-Date,Time,Technician,Lab,Plot,Seed sample,Humidity,Light,Temperature,Equipment Fault,Plants,Blossoms,Fruit,Min Height,Max Height,Median Height,Notes
-2022-02-17,16:00,4,B,3,4,0.5,0.0,4.0,False,0,0,0,0.0,0.0,0.0,"
-"
-2022-02-17,20:00,1,D,4,3,0.5,0.0,4.0,False,0,0,0,0.0,0.0,0.0,"
-"
