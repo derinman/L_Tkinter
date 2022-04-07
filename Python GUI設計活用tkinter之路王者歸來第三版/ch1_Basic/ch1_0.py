@@ -2,6 +2,7 @@
 import tkinter
 
 print(tkinter.TkVersion)
+print(dir(tkinter))
 
 
 
