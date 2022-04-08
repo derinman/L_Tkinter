@@ -1,5 +1,11 @@
 # ch6_7.py
 from tkinter import *
+
+# x = StringVar() # 儲存一個 string 型別變數, 預設值為""
+# x = IntVar() # 儲存一個整型變數, 預設值為0
+# x = DoubleVar() # 儲存一個浮點型變數, 預設值為0.0
+# x = BooleanVar() # 儲存一個布林型變數, 返回值為 0 (代表 False) 或 1 (代表 True)
+
 def calculate():                    # 執行計算並顯示結果
     result = eval(equ.get())
     equ.set(equ.get() + "=\n" + str(result))
@@ -58,10 +64,3 @@ Button(root,text="=",width=5,bg ="yellow",
        command=lambda:calculate()).grid(row=5,column=3)
 
 root.mainloop()
-
-
-
-
-
-
-

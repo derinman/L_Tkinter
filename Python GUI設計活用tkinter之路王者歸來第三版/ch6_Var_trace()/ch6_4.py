@@ -1,6 +1,11 @@
 # ch6_4.py
 from tkinter import *
 
+# x = StringVar() # 儲存一個 string 型別變數, 預設值為""
+# x = IntVar() # 儲存一個整型變數, 預設值為0
+# x = DoubleVar() # 儲存一個浮點型變數, 預設值為0.0
+# x = BooleanVar() # 儲存一個布林型變數, 返回值為 0 (代表 False) 或 1 (代表 True)
+
 def callback(*args):
     xL.set(xE.get())                    # 更改標籤內容
     print("data changed : ",xE.get())   # Python Shell視窗輸出

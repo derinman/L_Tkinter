@@ -1,6 +1,11 @@
 # ch6_2.py
 from tkinter import *
 
+# x = StringVar() # 儲存一個 string 型別變數, 預設值為""
+# x = IntVar() # 儲存一個整型變數, 預設值為0
+# x = DoubleVar() # 儲存一個浮點型變數, 預設值為0.0
+# x = BooleanVar() # 儲存一個布林型變數, 返回值為 0 (代表 False) 或 1 (代表 True)
+
 def btn_hit():                      # 處理按鈕事件
     if x.get() == "":               # 如果目前是空字串
         x.set("I like tkinter")     # 顯示文字

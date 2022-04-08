@@ -1,6 +1,11 @@
 # ch6_8.py
 from tkinter import * # Import tkinter
 
+# x = StringVar() # 儲存一個 string 型別變數, 預設值為""
+# x = IntVar() # 儲存一個整型變數, 預設值為0
+# x = DoubleVar() # 儲存一個浮點型變數, 預設值為0.0
+# x = BooleanVar() # 儲存一個布林型變數, 返回值為 0 (代表 False) 或 1 (代表 True)
+
 def cal():
     monthrate = float(rateVar.get()) / (12*100)         # 改成百分比以及月利率
     molecules = float(loanVar.get()) * monthrate
