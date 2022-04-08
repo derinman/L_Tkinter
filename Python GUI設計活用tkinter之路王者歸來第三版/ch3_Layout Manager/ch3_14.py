@@ -11,7 +11,7 @@ lab3 = Label(window,text="長庚科技大學",
               bg="lightblue")       # 標籤背景是淺藍色
 lab1.pack(fill=X)                   # 填滿X軸包裝與定位元件
 lab2.pack()                         # 包裝與定位元件
-lab3.pack(fill=X)                   # 填滿X軸包裝與定位元件
+lab3.pack(fill=X, expand=1)                   # 填滿X軸包裝與定位元件
 
 window.mainloop()
 

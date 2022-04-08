@@ -4,8 +4,8 @@ from tkinter import *
 root = Tk()
 root.title("ch3_35_1")
 
-root.rowconfigure(1, weight=1)
-root.columnconfigure(0, weight=1)
+root.rowconfigure(1, weight=1)#當視窗改變時row1的縮放比例是1
+root.columnconfigure(0, weight=1)#當視窗改變時column0的縮放比例是1
 
 lab1 = Label(root,text="Label 1",bg="pink")
 lab1.grid(row=0,column=0,padx=5,pady=5)

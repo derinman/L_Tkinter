@@ -11,7 +11,7 @@ lab3 = Label(window,text="長庚科技大學",
               bg="lightblue")       # 標籤背景是淺藍色
 lab1.pack(side=LEFT,fill=Y)         # 從左配置控件fill=Y
 lab2.pack(fill=X)                   # 預設從上開始配置控件fill=X
-lab3.pack(fill=BOTH,expand=1)    # fill=BOTH,expand=True
+lab3.pack(fill=Y,expand=1)    # fill=BOTH,expand=True
 
 window.mainloop()
 

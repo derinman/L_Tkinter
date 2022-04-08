@@ -9,9 +9,9 @@ Label(root,text='Mississippi',bg='red',fg='white',
 Label(root,text='Kentucky',bg='green',fg='white',
       font='Arial 20 bold italic').pack(side=LEFT,fill=BOTH,expand=True)  
 Label(root,text='Purdue',bg='blue',fg='white',
-      font='Times 20 bold').pack(side=LEFT,fill=Y)  
+      font='Times 20 bold').pack(side=LEFT,fill=Y,expand=1)  
 
-root.mainloop() 
+root.mainloop()
 
 
 

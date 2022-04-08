@@ -7,7 +7,7 @@ lab1 = Label(window,text="明志工專")
 lab2 = Label(window,bg="yellow",width=20)
 lab3 = Label(window,text="明志科技大學")
 lab4 = Label(window,bg="aqua",width=20)
-lab1.grid(row=0,column=0,padx=5,pady=5,sticky=W)
+lab1.grid(row=0,column=0,padx=5,pady=5,sticky=W)#關掉sticky看看
 lab2.grid(row=0,column=1,padx=5,pady=5)
 lab3.grid(row=1,column=0,padx=5)
 lab4.grid(row=1,column=1,padx=5)
