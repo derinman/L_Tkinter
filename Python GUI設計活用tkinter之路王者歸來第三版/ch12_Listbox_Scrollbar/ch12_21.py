@@ -2,9 +2,12 @@
 from tkinter import *
 def getIndex(event):                    # 處理按一下選項
     lb.index = lb.nearest(event.y)      # 目前選項的索引
+    print("meme")
     
 def dragJob(event):                     # 處理拖曳選項
     newIndex = lb.nearest(event.y)      # 目前選項的新索引
+    print("newIndex:", newIndex)
+    print("lb.index:",lb.index)
     if newIndex < lb.index:             # 往上拖曳
         x = lb.get(newIndex)            # 獲得新位置內容
         lb.delete(newIndex)             # 刪除新位置的內容

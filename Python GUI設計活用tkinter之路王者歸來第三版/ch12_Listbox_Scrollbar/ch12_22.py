@@ -10,7 +10,7 @@ scrollbar.pack(side=RIGHT, fill=Y)
 
 # 建立Listbox, yscrollcommand指向scrollbar.set方法
 lb = Listbox(root, yscrollcommand=scrollbar.set)
-for i in range(50):                     # 建立50筆項目
+for i in range(500):                     # 建立50筆項目
     lb.insert(END, "Line " + str(i))
 lb.pack(side=LEFT,fill=BOTH,expand=True)
 

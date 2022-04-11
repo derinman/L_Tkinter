@@ -1,7 +1,9 @@
 # ch12_15.py
 from tkinter import *
-def callback():                 # 列印檢查結果                
-    print(lb.selection_includes(3))
+def callback():     
+    print(dir(lb))         
+    print("####################")                   
+    print(lb.selection_includes(3)) # 列印檢查結果
           
 fruits = ["Banana","Watermelon","Pineapple",
           "Orange","Grapes","Mango"]
