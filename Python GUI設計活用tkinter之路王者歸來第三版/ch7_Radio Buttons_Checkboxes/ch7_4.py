@@ -1,5 +1,6 @@
 # ch7_4.py
 from tkinter import *
+
 def printSelection():
     print(cities[var.get()])            # 列出所選城市
 

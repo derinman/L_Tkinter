@@ -2,6 +2,10 @@
 from tkinter import * 
 import random
 
+import os
+
+dirname = os.path.dirname(__file__)
+
 def do_shuffle():
     random.shuffle(gifList)
     for i in range(3):
@@ -12,7 +16,7 @@ window.title("ch8_14")
         
 gifList = []                    # 圖片串列
 for i in range(1, 8):           # 建立圖片串列
-    gifList.append(PhotoImage(file="bookfigures/" + str(i) + ".gif"))
+    gifList.append(PhotoImage(file=dirname+"/bookfigures/" + str(i) + ".gif"))
         
 frame = Frame(window)           # 容器, 儲存圖書封面
 frame.pack()

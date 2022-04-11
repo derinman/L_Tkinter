@@ -1,11 +1,15 @@
 # ch8_7.py
 from tkinter import *
 
+import os 
+
+dirname = os.path.dirname(__file__)
+
 root = Tk()
 root.title("ch8_7")                         # 視窗標題
 
 msg = "歡迎進入Silicon Stone Educaiton系統"
-sseGif = PhotoImage(file="sse.gif")         # Logo影像檔
+sseGif = PhotoImage(file=dirname+"/sse.gif")         # Logo影像檔
 logo = Label(root,image=sseGif,text=msg,compound=BOTTOM)
 logo.pack()
 

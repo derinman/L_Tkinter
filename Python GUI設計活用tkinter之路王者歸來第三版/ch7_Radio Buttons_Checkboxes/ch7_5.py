@@ -1,14 +1,19 @@
 # ch7_5.py
 from tkinter import *
+
+import os
+
+dirname = os.path.dirname(__file__)
+
 def printSelection():
     label.config(text="你選的是"+var.get())
 
 root = Tk()
 root.title("ch7_5")                             # 視窗標題
 
-imgStar = PhotoImage(file="star.gif")
-imgMoon = PhotoImage(file="moon.gif")
-imgSun = PhotoImage(file="sun.gif")
+imgStar = PhotoImage(file=dirname+"/star.gif")
+imgMoon = PhotoImage(file=dirname+"/moon.gif")
+imgSun = PhotoImage(file=dirname+"/sun.gif")
 
 var = StringVar()                               # 選項紐綁定的變數
 var.set("星星")                                 # 預設選項是男生
