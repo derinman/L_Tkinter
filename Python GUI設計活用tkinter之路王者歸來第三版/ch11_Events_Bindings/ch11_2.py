@@ -2,6 +2,7 @@
 from tkinter import *
 def callback(event):                        # 事件處理程式
     print("Clicked at", event.x, event.y)   # 列印座標
+    print(event)
     
 root = Tk()
 root.title("ch11_2")
