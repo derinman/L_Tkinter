@@ -12,7 +12,7 @@ root.title("ch15_5")
 
 pb = Progressbar(root,length=200,mode="determinate",orient=HORIZONTAL)
 pb.pack(padx=5,pady=10)
-pb["maximum"] = 100
+pb["maximum"] = 1000
 pb["value"] = 0
  
 btnRun = Button(root,text="Run",command=run)    # 建立Run按鈕

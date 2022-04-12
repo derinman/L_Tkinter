@@ -6,6 +6,7 @@ def load():                         # 啟動Prograssbar
     pb["value"] = 0                 # Prograssbar初始值
     pb["maximum"] = maxbytes        # Prograddbar最大值
     loading()
+
 def loading():                      # 模擬下載資料
     global bytes
     bytes += 500                    # 模擬每次下在500bytes

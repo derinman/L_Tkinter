@@ -1,6 +1,10 @@
 # ch16_11.py
 from tkinter import *
-       
+
+import os
+
+dirname = os.path.dirname(__file__)
+
 root = Tk()
 root.title("ch16_11")
 root.geometry("300x180")
@@ -15,7 +19,7 @@ filemenu.add_command(label="Exit",command=root.destroy)
 # 建立工具列
 toolbar = Frame(root,relief=RAISED,borderwidth=3)
 # 在工具列內建立按紐
-sunGif = PhotoImage(file="sun.gif")
+sunGif = PhotoImage(file=dirname+"/sun.gif")
 exitBtn = Button(toolbar,image=sunGif,command=root.destroy)
 exitBtn.pack(side=LEFT,padx=3,pady=3)   # 包裝按鈕
 toolbar.pack(side=TOP,fill=X)           # 包裝工具列
