@@ -29,7 +29,7 @@ weightVar = StringVar()
 weightFamily = ("normal","bold")
 weightVar.set(weightFamily[0])
 weight = OptionMenu(toolbar,weightVar,*weightFamily,command=weightChanged)
-weight.pack(pady=3,side=LEFT)
+weight.pack(pady=2,side=LEFT)
 
 # 建立Text
 text = Text(root)
