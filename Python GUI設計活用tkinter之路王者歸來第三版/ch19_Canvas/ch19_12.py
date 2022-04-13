@@ -13,6 +13,8 @@ canvas.create_text(300, 160, text='Ming-Chi Institute of Technology', fill='blue
 canvas.create_text(300, 200, text='明志科技大學', fill='blue',
                    font=('華康新綜藝體 Std W7',20))
 
+tk.mainloop()
+
 
 
 

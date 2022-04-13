@@ -16,6 +16,8 @@ canvas.create_arc(320, 250, 620, 350, extent=180, style=ARC)
 canvas.create_arc(10, 360, 310, 460, extent=270, style=ARC, outline='blue')
 canvas.create_arc(320, 360, 620, 460, extent=359, style=ARC)
 
+tk.mainloop()
+
 
 
 

@@ -12,6 +12,8 @@ for i in range(50):                 # 隨機繪50個不同位置與大小的矩�
     if y1 > y2: y1,y2 = y2,y1       # 確保左上角y座標小於右下角y座標
     canvas.create_rectangle(x1, y1, x2, y2)
 
+tk.mainloop()
+
 
 
 
