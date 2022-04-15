@@ -68,15 +68,18 @@ Flag = True                         # 判斷那一球勝利
 frame = Frame(tk)                   # 建立框架
 frame.pack(padx=5, pady=5)
 # 在框架Frame內建立標籤Label, 輸入獲勝的球, 按鈕Button
+
 Label(frame, text="那一個球獲勝 : ").pack(side=LEFT)
+
 ball = StringVar()
 ball.set("1or2")
 entry = Entry(frame, textvariable=ball).pack(side=LEFT,padx=3)
+
 startBtn = StringVar()
 startBtn.set("開始")
 Button(frame, textvariable=startBtn,command=running).pack(side=LEFT)
-raceResult = StringVar()
 
+raceResult = StringVar()
 Label(frame,width=16,textvariable=raceResult).pack(side=LEFT,padx=3)
 
 tk.mainloop()

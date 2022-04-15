@@ -16,4 +16,5 @@ for x in range(0, 100):
     tk.update()                 # 強制tkinter重繪
     time.sleep(0.05)
 
+tk.mainloop()
 

@@ -22,6 +22,7 @@ canvas.pack()
 startAngle = 0
 while True:
     startAngle += 5
+    print(startAngle)
     displayFan(startAngle)
     canvas.after(50) 
     canvas.update()
