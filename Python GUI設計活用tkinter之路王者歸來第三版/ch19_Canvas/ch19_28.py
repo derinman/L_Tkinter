@@ -76,6 +76,8 @@ while ball.notTouchBottom:                      # 如果球未接觸畫布底端
     tk.update()
     time.sleep(speed)                           # 可以控制移動速度
 
+tk.mainloop()
+
 
     
 

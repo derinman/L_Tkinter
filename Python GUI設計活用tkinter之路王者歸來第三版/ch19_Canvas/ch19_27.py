@@ -15,6 +15,7 @@ class Ball:
         self.y = step                               # 垂直移動單位
     def hitRacket(self, ballPos):                                       
         racketPos = self.canvas.coords(self.racket.id)
+        print('racketPos:', racketPos)
         if ballPos[2] >= racketPos[0] and ballPos[0] <= racketPos[2]:
             if ballPos[3] >= racketPos[1] and ballPos[3] <= racketPos[3]:
                 return True
@@ -22,6 +23,7 @@ class Ball:
     def ballMove(self):
         self.canvas.move(self.id, self.x, self.y)   # step是正值表示往下移動
         ballPos = self.canvas.coords(self.id)
+        print('ballPos:', ballPos)
         if ballPos[0] <= 0:                     # 偵測球是否超過畫布左方
             self.x = step
         if ballPos[1] <= 0:                     # 偵測球是否超過畫布上方
