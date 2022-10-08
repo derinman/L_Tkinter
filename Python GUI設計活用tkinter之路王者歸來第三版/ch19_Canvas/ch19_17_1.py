@@ -10,4 +10,6 @@ for x in range(0, 80):
     tk.update()                 # 強制tkinter重繪
     canvas.after(50)
 
+tk.mainloop()
+
 

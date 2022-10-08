@@ -1,11 +1,15 @@
 # ch17_29.py
 from tkinter import *
 from PIL import Image, ImageTk
-                                
+
+import os 
+
+dirname = os.path.dirname(__file__)
+
 root = Tk()
 root.title("ch17_29")
 
-img = Image.open("hung.jpg")
+img = Image.open(dirname+"/hung.jpg")
 myPhoto = ImageTk.PhotoImage(img)
 
 text = Text()

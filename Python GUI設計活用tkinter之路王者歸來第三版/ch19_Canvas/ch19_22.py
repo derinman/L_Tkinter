@@ -8,4 +8,4 @@ id = canvas.create_oval(10,50,60,100,fill='yellow', outline='lightgray')
 ballPos = canvas.coords(id)
 print(ballPos)
 
-
+tk.mainloop()

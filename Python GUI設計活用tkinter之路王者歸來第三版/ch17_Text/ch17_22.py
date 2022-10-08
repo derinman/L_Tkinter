@@ -1,6 +1,10 @@
 # ch17_22.py
 from tkinter import *
 
+import os
+
+dirname = os.path.dirname(__file__)
+
 def spellingCheck():
     text.tag_remove("spellErr","1.0",END)           # 刪除標籤但是不刪除標籤定義
     textwords = text.get("1.0",END).split()         # Text控件的內文
@@ -19,7 +23,9 @@ def spellingCheck():
             print("error", word)
             pos = text.search(word, start, END)
             text.tag_add("spellErr", pos, "%s+%dc" % (pos,len(word)))            
-            pos = "%s+%dc" % (pos,len(word))     
+            pos = "%s+%dc" % (pos,len(word))
+            print(pos)
+
     
 def clrText():
     text.tag_remove("spellErr","1.0",END)
@@ -48,8 +54,8 @@ text.insert(END,"You can hear the whistle blw\n")
 text.insert(END,"A hunded miles,\n")
 
 text.tag_configure("spellErr", foreground="red")    # 定義未來找到的標籤定義
-with open("myDict.txt", "r") as dictObj:
-    dicts = dictObj.read().split("\n")              # 自訂字典串列
+with open(dirname+"/myDict.txt", "r") as dictObj:
+    dicts = dictObj.read().split("\n")            # 自訂字典串列
     
 root.mainloop()
 

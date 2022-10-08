@@ -24,7 +24,7 @@ while True:
         x = 0               
         canvas.delete("msg")                             
         canvas.create_text(x, yMsg, text = "王者歸來", tags = "msg")
-                
-window.mainloop() 
+
+window.mainloop()
 
 

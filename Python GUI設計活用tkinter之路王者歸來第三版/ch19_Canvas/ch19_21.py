@@ -14,7 +14,7 @@ class Ball:
 winW = 640                                      # 定義畫布寬度
 winH = 480                                      # 定義畫布高度
 step = 3                                        # 定義速度可想成位移步伐
-speed = 0.03                                    # 設定移動速度
+speed = 0.3                                    # 設定移動速度
 
 tk = Tk()
 tk.title("Bouncing Ball")                       # 遊戲視窗標題
@@ -30,6 +30,7 @@ while True:
     tk.update()
     time.sleep(speed)                           # 可以控制移動速度
 
+tk.mainloop()
 
     
 
