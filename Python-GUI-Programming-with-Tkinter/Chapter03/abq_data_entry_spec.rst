@@ -89,3 +89,46 @@ Data Dictionary
 +------------+----------+------+------------------+--------------------------+
 |Notes       |String    |      |                  |Miscellaneous notes       |
 +------------+----------+------+------------------+--------------------------+
+
+inman
+-----
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``correct_map``
+     - dict
+     - For each problem ID value listed by ``answers``, provides:
+
+       * ``correctness``: string; 'correct', 'incorrect'
+       * ``hint``: string; Gives optional hint. Nulls allowed.
+       * ``hintmode``: string; None, 'on_request', 'always'. Nulls allowed.
+       * ``msg``: string; Gives extra message response.
+       * ``npoints``: integer; Points awarded for this ``answer_id``. Nulls allowed.
+       * ``queuestate``: dict; None when not queued, else ``{key:'', time:''}``
+         where ``key`` is a secret string dump of a DateTime object in the form
+         '%Y%m%d%H%M%S'. Nulls allowed.
+
+   * - ``grade``
+     - integer
+     - Current grade value.
+   * - ``max_grade``
+     - integer
+     - Maximum possible grade value.
+
+.. math:: \sigma_\mathrm{mean} = \frac{\sigma}{\sqrt{N}}
+   :label: math-sample
+
+.. math::
+
+   \nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}
+
+   \nabla \cdot \mathbf{B} = 0
+
+.. math::
+
+   x &= (a + b)^2 \\
+     &= a^2 + 2ab + b^2
