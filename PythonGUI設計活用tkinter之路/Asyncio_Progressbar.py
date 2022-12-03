@@ -42,3 +42,5 @@ class Window(tk.Tk):
                 await asyncio.sleep(0)
 
 asyncio.run(App().exec())
+
+# https://stackoverflow.com/questions/60924172/python-tkinter-display-progress-bar-during-function-processing
